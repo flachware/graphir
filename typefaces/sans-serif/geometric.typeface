@@ -1,0 +1,5 @@
+name: geometric
+
+graphs:
+  - n.graph
+  - o.graph
