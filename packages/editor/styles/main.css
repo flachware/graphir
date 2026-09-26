@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+}
+
+.editor {
+  &.draw {
+    cursor: crosshair;
+  }
+}
+
+.render-view {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+
+  path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.1px;
+  }
+
+  .node {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+
+    &.smooth {
+      stroke-width: 1.1px;
+    }
+
+    &.selected {
+      fill: black;
+    }
+
+    &.selectable {
+      pointer-events: visible;
+    }
+  }
+
+  .handle {
+    fill: #fff;
+    stroke: #bbb;
+    stroke-width: 1.1px;
+
+    &.selected {
+      stroke: none;
+      fill: #000;
+    }
+
+    &.selectable {
+      pointer-events: visible;
+    }
+  }
+
+  .tangent {
+    stroke: #bbb;
+    stroke-width: 1.1px;
+  }
+
+  .segment {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 10px;
+    pointer-events: stroke;
+  }
+}
+
+.panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  output {
+    min-width: 3em;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.toggle-group {
+  display: flex;
+
+  button[aria-pressed="true"] {
+    background: black;
+    color: white;
+  }
+}
+
+.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 8px;
+  margin: 0;
+
+  dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+}

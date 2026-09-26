@@ -1,0 +1,16 @@
+{
+  "name": "@graphir/render",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "svelte": "./index.js"
+    }
+  },
+  "dependencies": {
+    "artea": "^0.1.0"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}
